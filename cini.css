@@ -58,7 +58,7 @@ filter: invert(100%);
 }
 
 #navbar a:active {
-color: #E4C784;
+color: #FFFFFF;
 }
 
 .navlogo {
@@ -131,10 +131,6 @@ background-color: #000000;
 
 footer a:hover img {
 filter: invert(100%) brightness(10%);
-}
-
-footer a:active {
-color: #E4C784;
 }
 
 #footimg {
