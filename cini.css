@@ -149,10 +149,6 @@ color: #e0245e;
 iframe {
 width: 100%;
 height: 50vw;
-border: solid;
-border-color: #2A1014;
-border-width: 0.6em;
-border-radius: 0.2em 1.1em 0.2em 1.1em;
 }
 
 .container {
@@ -172,9 +168,9 @@ grid-template-columns: auto;
 grid-template-rows: auto;
 grid-column-gap: 2%;
 grid-row-gap: 0;
-border-bottom: solid;
-border-bottom-color: #FFFFFF;
-border-bottom-width: 0.5em;
+border-top: solid;
+border-top-color: #FFFFFF;
+border-top-width: 0.2em;
 width: 100%;
 margin-bottom: 60px;
 }
@@ -313,9 +309,6 @@ grid-template-columns: 30% 1fr;
 grid-template-rows: auto;
 grid-column-gap: 2%;
 grid-row-gap: 1%;
-border-bottom: solid;
-border-bottom-color: ff5757;
-border-bottom-width: 0.5em;
 width: 100%;
 margin-bottom: 20px;
 }
