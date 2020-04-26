@@ -119,13 +119,13 @@ color: #000000;
 text-align: center;
 text-decoration: none;
 font-size: 2vw;
+padding: 1vw;
 }
 
 footer a {
 color: #000000;
 text-align: center;
 text-decoration: none;
-padding: 1vw;
 }
 
 footer a:hover {
