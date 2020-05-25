@@ -8,327 +8,717 @@ font-family: "Libre Franklin";
 src: url(fonts/Libre_Franklin/LibreFranklin-Regular.ttf);
 }
 
+. {box-sizing: border-box;}
+
 body {
-background-color: #000000;
-color: #FFFFFF;
-font-family: Shanti, Helvetica, sans-serif;
-margin: auto;
-font-size: 3vw;
-}
-
-#wrapper {
-margin: auto;
-width: 100%;
-display: flex;
-flex-direction: column;
-}
-
-#navbar {
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #FFFFFF;
-font-family: "Libre Franklin", Gadget, sans-serif;
-font-weight: 900;
-width: 100%;
-}
-
-#navbar a {
-display: flex;
-font-size: 3.8vw;
-display: block;
-color: #000000;
-padding: 1vw;
-text-decoration: none;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 5vw;
-padding-left: 2vw;
-padding-right: 2vw;
-}
-
-#navbar a img {
-height: 100%;
-}
-
-#navbar a:hover {
-background-color: #000000;
-color: #FFFFFF;
-}
-
-#navbar a:hover img {
-filter: invert(100%);
-}
-
-#navbar a:active {
-color: #FFFFFF;
-}
-
-.navlogo {
-display: none;
-}
-
-main {
-background-color: #000000;
-width: 100%;
-}
-
-main div img {
-margin: auto;
-width: 100%;
-height: auto;
-}
-
-h1 {
-color: #FFFFFF;
-font-family: "Libre Franklin", Gadget, sans-serif;
-text-align: center;
-}
-
-h2 {
-color: #e0245e;
-font-family: "Libre Franklin", Gadget, sans-serif;\
-}
-
-header {
-display: flex;
-justify-content: center;
-}
-
-header a {
-margin: auto;
-text-decoration: none;
-}
-
-header img {
-display: flex;
-justify-content: center;
-margin: auto;
-width: 20vw;
-height: auto;
-margin-top: 2vw;
-margin-bottom: 2vw;
-}
-
-footer {
-background-color: #FFFFFF;
-font-weight: 900;
-width: 100%;
-color: #000000;
-text-align: center;
-text-decoration: none;
-font-size: 2vw;
-padding: 1vw;
-}
-
-footer a {
-color: #000000;
-text-align: center;
-text-decoration: none;
-}
-
-footer a:hover {
-color: #FFFFFF;
-background-color: #000000;
-}
-
-footer a:hover img {
-filter: invert(100%) brightness(10%);
+	font-family: Shanti, Helvetica, sans-serif;
+	background-color: #000000;
+	color: #FFFFFF;
+	margin: 0;
+	font-size: 3vw;
 }
 
 a {
-color: #e0245e;
+	color: #e0245e;
 }
 
 a:hover {
-color: #FFFFFF;
+	color: #FFFFFF;
+	text-decoration: none;
 }
 
-a:active {
-color: #e0245e;
+header {
+	font-family: "Libre Franklin", Gadget, sans-serif;
+	background-color: #000000;
+	background-image: url("images/");
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	color: #FFFFFF;
+	padding-top: 10vw;
+	padding-bottom: 0;
 }
 
-iframe {
-width: 100%;
-height: 50vw;
+header h3 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	padding-top: 2vw;
+	font-size: 3vw;
+	letter-spacing: 0.2vw;
+	width: 60vw;
 }
 
-.container {
-padding-left: 5vw;
-padding-right: 5vw;
-padding-bottom: 10vw;
+header img {
+	width: 40vw;
+	height: auto;
+	margin: 2vw auto 3vw auto;
+	display: block;
 }
 
-.container div {
-margin-bottom: 7vw;
+nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #000000;
+	overflow-x: hidden;
+	padding-top: 15vw;
+	transition: 0.3s;
+	display: flex;
+	flex-direction: column;
 }
 
-#card {
-margin: auto;
-display: grid;
-grid-template-columns: auto;
-grid-template-rows: auto;
-grid-column-gap: 2%;
-grid-row-gap: 0;
-border-top: solid;
-border-top-color: #FFFFFF;
-border-top-width: 0.2em;
-width: 100%;
-margin-bottom: 60px;
+nav a {
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.3s;
+	font-weight: 900;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+	font-size: 4vw;
 }
 
-#card img {
-grid-row: 1 / 2;
-grid-column: 1 / 2;
-width: 100%;
-margin-top: 0;
+nav img {
+	display: none;
 }
 
-#card div {
-grid-row: 2 / 3;
-grid-column: 1 / 2;
-width: 100%;
-padding: 2%;
-font-size: 3vw;
+nav a:hover {
+	background-color: #000000;
+	color: #FFFFFF;
 }
 
-#card p {
-padding-right: 10%;
+nav .closebtn {
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+  font-size: 7vw;
+  padding: 0;
 }
 
-#date {
-font-size: 2vw;
+.navbutton {
+	display: flex;
+	background-color: #000000;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+	height: 12vw;
+	color: #FFFFFF;
+	padding: 2vw;
+	padding-left: 6vw;
 }
 
-
-@media only screen and (orientation: landscape) {
-body {
-font-size: 16px;
-}
-
-#wrapper {
-width: 80%;
-margin-bottom: 3em;
-margin-top: 1em;
-}
-
-#navbar {
-position: fixed;
-left: 0;
-top: 100px;
-width: 100px;
-display: flex;
-flex-direction: column;
-padding-bottom: 5px;
-padding-top: 5px;
-}
-
-#navbar a {
-font-size: 1em;
-padding-right: 0;
-padding-left: 0;
-padding-bottom: 5px;
-padding-top: 5px;
-text-decoration: none;
-width: 100%;
-height: 2em;
-}
-
-#navbar a img {
-padding-right: 0;
-padding-left: 0;
-height: 100%;
-}
-
-#date {
-font-size: 11px;
+.navbutton span {
+	font-size: 8vw;
+	cursor:pointer;
 }
 
 main {
-
+	padding: 5vw;
+	background-color: #000000;
 }
 
-header img {
-width: 5vw;
-height: auto;
+main h2 {
+	color: #e0245e;
+	font-family: "Libre Franklin", Gadget, sans-serif;
+	letter-spacing: 0.15vw;
+	margin-top: 0;
 }
 
-iframe {
-height: 20vw;
+.card {
+	display: grid;
+	grid-gap: 2vw;
+	grid-template-columns: 33% auto;
+	width: 100%;
+	border-bottom: solid;
+	border-width: 0.2vw;
+	border-color: #FFFFFF;
+	margin-top: 3vw;
+	padding-bottom: 3vw;
 }
 
-.container {
-
+.card img {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	width: 100%;
+	margin: auto;
 }
 
-.container div {
-margin-bottom: 0;
+.carddetails {
+	grid-column-start: 2;
+	grid-column-end: 3;
 }
 
-h1 {
-padding-bottom: 8px;
-width: 300px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 40px;
-margin-top: 30px;
+.carddetails h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-transform: uppercase;
 }
 
-#footimg {
-width: 0;
-margin-bottom: 20px;
-margin-top: 50px;
+.carddetails h3 a {
+	color: #e0245e;
+	text-decoration: none;
+	font-size: 4vw;
+}
+
+.carddetails h3 a:hover {
+	color: #FFFFFF;
+}
+
+.carddetails p {
+	font-size: 2.5vw;
+	margin-bottom: 0;
+	margin-top: 1vw;
+}
+
+.carddetails a {
+	font-size: 2vw;
 }
 
 footer {
-font-size: 0.6em;
-padding-top: 10px;
-padding-bottom: 10px;
-background-color: #000000;
-color: #FFFFFF;
+	width: 100%;
+	text-align: center;
+	background-color: #000000;
+	height: 18vw;
+	color: #FFFFFF;
+	padding-top: 4vw;
+	font-size: 2.5vw;
+	line-height: 5vw;
 }
 
 footer a {
-color: #FFFFFF;
+	color: #FFFFFF;
+	padding: 1vw;
+}
+
+footer a:hover {
+	color: #e0245e;
+}
+
+.article {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+}
+
+.article h1 {
+	font-family: "Libre Franklin", Gadget, sans-serif;
+	margin: 0;
+	margin-bottom: 3vw;
+	text-transform: uppercase;
+}
+
+.article .related h2 {
+	margin: 0;
+	margin-bottom: 1vw;
+	color: #1f1f1f;
+}
+
+.article .thumb {
+	width: 100%;
+	height: auto;
+	margin-bottom: 3vw;
+}
+
+.article .authdate {
+	font-size: 2.5vw;
+	font-family: "Libre Franklin", Gadget, sans-serif;
+	margin-bottom: 3vw;
+}
+
+.article .content {
+	margin-bottom: 3vw;
+}
+
+.article .related {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3vw;
+}
+
+.article .related a {
+	margin-bottom: 1vw;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.article span {
+	width: 100%;
+	text-align: center;
+	margin-top: 5vw;
+	margin-bottom: 2vw;
+}
+
+.article span a {
+	cursor: pointer;
+	color: #FFFFFF;
+	background-color: #000000;
+	text-decoration: none;
+	padding: 2vw;
+	margin-left: 2vw;
+	margin-right: 2vw;
+	transition: 0.3s;
+	border-radius: 0.7vw;
+}
+
+.article span a:hover {
+	background-color: #e0245e;
+	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
+}
+
+.info {
+	display: block;
+	text-align: center;
+	min-height: 600px;
+	padding-bottom: 10vw;
+}
+
+.info h1 {
+	font-family: "Libre Franklin", Gadget, sans-serif;
+	font-size: 3em;
+}
+
+.info h3 {
+	border-bottom: solid;
+	border-width: 0.5vw;
+	border-color: #e0245e;
+	margin: auto;
+	width: 70%;
+	padding-bottom: 1vw;
+	margin-bottom: 1vw;
+}
+
+.info span {
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.8em;
+}
+
+.info h2 {
+	margin-top: 10vw;
+	color: #1f1f1f;
+}
+
+.info .quote {
+	color: #e0245e;
+}
+
+.info .container {
+	display: grid;
+	grid-template-rows: 13vw 13vw 13vw 13vw;
+	margin-top: 5vw;
+}
+
+.info .infobutton {
+	cursor: pointer;
+	color: #FFFFFF;
+	background-color: #000000;
+	text-decoration: none;
+	padding: 2vw;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 0.3s;
+	border-radius: 0.7vw;
+	width: 30vw;
+	height: 5vw;
+}
+
+.info .infobutton:hover {
+	background-color: #e0245e;
+	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
+}
+
+
+
+@media only screen and (min-width: 600px) {
+
+body {
+	font-size: 15px;
+}
+
+header {
+	font-family: "Libre Franklin", Gadget, sans-serif;
+	background-color: #000000;
+	background-image: url("images/homebanner.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 10px;
 }
 
 header img {
-padding: 0;
-width: 0;
+	width: 260px;
+	margin: 0 auto 15px auto;
 }
 
-h2 {
-margin-top: 0;
+header h3 {
+	border-width: 5px;
+	width: 360px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 11px;
+	font-size: 1em;
+	letter-spacing: 2px;
+	padding-top: 10px;
 }
 
-.navlogo {
-display: inline;
+nav {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: #000000;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+	height: 50px;
+	padding: 0;
+	
+	}
+
+nav a {
+	margin: 0;
+	padding: 14px 50px 14px 50px;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.3s;
+	font-weight: 900;
+	font-size: 1em;
 }
 
-#card {margin: auto;
-display: grid;
-grid-template-columns: 30% 1fr;
-grid-template-rows: auto;
-grid-column-gap: 2%;
-grid-row-gap: 1%;
-width: 100%;
-margin-bottom: 20px;
+nav a:hover {
+	background-color: #e0245e;
 }
 
-#card img {grid-column: 1 / 2;
-grid-row: 1 / 2;
-width: 100%;
-margin-top: auto;
-margin-bottom: auto;
+nav img {
+	height: 35px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 0;
+	display: block;
 }
 
-#card div {grid-column: 2 / 3;
-grid-row: 1 / 2;
-width: 100%;
-padding: 2%;
-font-size: 1em;
+.closebtn {
+	display: none;
 }
+
+.navbutton {
+	display: none;
+}
+
+main {
+	display: grid;
+	grid-gap: 30px;
+	width: 80%;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 35px;
+}
+
+main h2 {
+	letter-spacing: 1px;
+}
+
+.intro {
+	grid-row: 1/2;
+	grid-column: 1/2;
+}
+
+.articlefeed {
+	grid-row: 2/3;
+	grid-column: 1/2;
+}
+
+.latest {
+	width: 100%
+}
+
+.card {
+	display: grid;
+	grid-gap: 15px;
+	width: 100%;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: #FFFFFF;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	grid-template-columns: 25% auto;
+}
+
+.card img {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	width: 100%;
+	margin: auto;
+}
+
+.carddetails {
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+.carddetails h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 1.5em;
+}
+
+.carddetails h3 a {
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.carddetails h3 a:hover {
+}
+
+.carddetails p {
+	font-size: 0.9em;
+	margin-bottom: 0;
+	margin-top: 8px;
+}
+
+.carddetails a {
+	font-size: 0.8em;
+}
+
+footer {
+	height: 90px;
+	padding-top: 10px;
+	font-size: 12px;
+	border-width: 5px;
+	line-height: 25px;
+}
+
+footer a {
+	padding: 0;
+}
+
+.article {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: 30% auto;
+	grid-template-rows: auto 230px auto;
+	width: 70%;
+}
+
+.article h1 {
+	margin-bottom: 10px;
+}
+
+.article .related h2 {
+	margin-bottom: 5px;
+}
+
+.article .thumb {
+	margin-bottom: 5px;
+	grid-column: 1/3;
+	grid-row: 1/2;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.article .authdate {
+	font-size: 0.8em;
+	margin-bottom: 0;
+}
+
+.article .content {
+	margin-bottom: 0;
+	grid-column: 2/3;
+	grid-row: 2/4;
+}
+
+.article .related {
+	margin-bottom: 0;
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+.article .related a {
+	margin-bottom: 7px;
+	font-size: 1em;
+}
+
+.article span {
+	margin: 0;
+	padding: 0;
+	grid-column: 1/2;
+	grid-row: 3/4;
+	display: grid;
+	grid-template-rows: 52px 52px 52px auto;
+}
+
+.article span a {
+	margin: auto;
+	padding: 7px;
+	border-radius: 4px;
+	width: 70%;
+}
+
+.article span a:hover {
+	box-shadow: 0 4px 14px 0 rgba(0,0,0,0.24), 0 14px 50px 0 rgba(0,0,0,0.19);
+}
+
+.info {
+	padding-bottom: 50px;
+	width: 500px;
+}
+
+.info h1 {
+	font-family: "Libre Franklin", Gadget, sans-serif;
+	font-size: 3em;
+}
+
+.info h2 {
+	margin-top: 30px;
+}
+
+.info h3 {
+	border-bottom: solid;
+	border-width: 2px;
+	border-color: #e0245e;
+	margin: auto;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	width: 260px;
+}
+
+.info span {
+	font-family: "Libre Franklin", Gadget, sans-serif;
+	font-size: 0.8em;
+}
+
+.info p {
+	width: 400px;
+	margin: auto;
+}
+
+.info .container {
+	grid-template-rows: 70px 70px 70px 70px;
+	margin-top: 30px;
+}
+
+.info .infobutton {
+	padding: 20px 0 0 0;
+	border-radius: 4px;
+	width: 200px;
+	height: 40px;
+}
+
+.info .infobutton:hover {
+	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
+}
+
+.latest {
+	display: grid;
+	grid-template-columns: 50%  50%;
+	grid-template-rows: auto;
+	grid-row-gap: 20px;
+}
+
+.latest .card {
+	width: 90%;
+	margin: auto;
+}
+
+.latest #first {
+	grid-column: 1/3;
+	grid-row: 1/2;
+}
+
+.latest .card h3 {
+	font-size: 20px;
+}
+
+.latest #first h3 {
+	font-size: 30px;
+}
+
+.latest .card {
+	grid-template-columns: 33% auto;
+}
+
+.latest #first {
+	grid-template-columns: 25% auto;
+}
+
+.latest #first p {
+	font-size: 20px;
+}
+
+.latest #first .carddetails {
+	font-size: 20px;
+}
+
+
+}
+
+@media only screen and (min-width: 1100px) {
+
+.twitfeed {
+	display: block;
+	grid-row: 2/3;
+	grid-column: 2/3;
+}
+
+}
+
+@media (min-width: 1450px) {
+
+main {
+	width: 60%;
+}
+
+.article {
+	grid-gap: 25px;
+	width: 50%;
+	grid-template-rows: 200px 230px auto;
+}
+
+.article h1 {
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+.article .thumb {
+	margin-bottom: 0;
+	grid-column: 1/2;
+	grid-row: 1/2;
+	width: 100%;
+}
+
+.article .authdate {
+	font-size: 0.8em;
+	margin-bottom: 0;
+}
+
+.article .content {
+	margin-bottom: 0;
+	grid-column: 2/3;
+	grid-row: 1/4;
+}
+
+.article .related {
+	margin-bottom: 0;
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+.article span {
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+
 
 }
