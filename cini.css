@@ -332,6 +332,28 @@ footer a:hover {
 	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
 }
 
+.button {
+	cursor: pointer;
+	background-color: #e0245e;
+	color: #000000;
+	text-decoration: none;
+	padding: 2vw;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 0.3s;
+	border-radius: 0.7vw;
+	width: 30vw;
+	height: 5vw;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.button:hover {
+	background-color: #FFFFFF;
+	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
+}
+
 
 
 @media only screen and (min-width: 600px) {
@@ -617,6 +639,17 @@ footer a {
 }
 
 .info .infobutton:hover {
+	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
+}
+
+.button {
+	padding: 20px 0 0 0;
+	border-radius: 4px;
+	width: 200px;
+	height: 40px;
+}
+
+.button:hover {
 	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
 }
 
