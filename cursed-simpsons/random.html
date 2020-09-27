@@ -29,6 +29,11 @@
 	<meta name="theme-color" content="#000000">
 	<style>
 	
+	@font-face{
+		font-family: BlackOpsOne;
+		src: url(BlackOpsOne-Regular.ttf);
+	}
+	
 	body {
 		background-image: url(bg.jpg);
 		background-repeat: no-repeat;
@@ -42,7 +47,6 @@
 		height: 500px;
 		display: block;
 		margin: auto;
-		margin-top: 100px;
 		box-shadow: 0 5px 30px #000000;
 	}
 	
@@ -54,17 +58,27 @@
 		bottom: 0;
 	}
 	
+	h1 {
+		color: #FFFFFF;
+		text-align: center;
+		margin-top: 100px;
+		font-family: BlackOpsOne;
+		letter-spacing: 5px;
+	}
+	
 	</style>
 </head>
 <body>
+<h1 id="imagename">you got simp1</h1>
 <img id="imageid" src="images/simp1.jpg">
 <br>
 <button onclick="randomImg()">gimme a simp</button>
 <script>
 function randomImg(){
 var randomNumber = Math.floor(Math.random() * 120) + 1;
-var imgName = "simp" + randomNumber + ".jpg";
-document.getElementById("imageid").src= "images/" + imgName;
+var imgName = "simp" + randomNumber;
+document.getElementById("imageid").src= "images/" + imgName + ".jpg";
+document.getElementById("imagename").innerText= "you got " + imgName;
 }
 </script>
 </body>
