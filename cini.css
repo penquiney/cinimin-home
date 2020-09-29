@@ -18,6 +18,14 @@ body {
 	font-size: 3vw;
 }
 
+::-moz-selection { /* Code for Firefox */
+  background: #e0245e;
+}
+
+::selection {
+  background: #e0245e;
+}
+
 a {
 	color: #e0245e;
 }
