@@ -35,38 +35,10 @@
 		<a href="index.html"><img src="images/icon.png"></a>
 	</header>
 	
-	<nav id="mySidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="/index.html">Home</a>
-		<a href="library.html">Library</a>
-		<a href="https://newstroop.cinimin.net/">News Troop</a>
-		<a href="https://cinimin.itch.io/">Itch.io</a>
-		<a href="https://www.youtube.com/channel/UC7BFOpI9eZo9gBCtNRP47rQ">YouTube</a>
-	</nav>
-	
+	<!-- Navigation -->
+	<nav id="mySidenav"></nav>
 	<div class="navbutton"><span onclick="openNav()">&#9776;</span></div>
-	
-	<script>
-		function myFunction(x) {
-			if (x.matches) { // If media query matches
-				document.getElementById("mySidenav").style.width = "100%";
-			} else {
-				document.getElementById("mySidenav").style.width = "0";
-			}
-		}
-
-		var x = window.matchMedia("(min-width: 600px)")
-		myFunction(x) // Call listener function at run time
-		x.addListener(myFunction) // Attach listener function on state changes
-		
-		function openNav() {
-		document.getElementById("mySidenav").style.width = "60vw";
-		}
-
-		function closeNav() {
-		document.getElementById("mySidenav").style.width = "0";
-		}
-	</script>
+	<script type="text/javascript" src="navAnim.js"></script>
 	
 	<main>
 		<div class="intro" style="display: grid; grid-colmumn-template: 1fr; grid-gap: 20px;">
@@ -78,8 +50,7 @@
 		</div>
 	</main>
 	
-	<footer>
-Discord: Cinimin#4461 • <a href="https://twitter.com/CiniminBun">Twitter: @CiniminBun</a> • <a href="mailto:ciniminbun@gmail.com">ciniminbun@gmail.com</a>
-	</footer>
+	<footer id="footer"></footer>
+	<script type="text/javascript" src="footerFill.js"></script>
 </body>
 </html>

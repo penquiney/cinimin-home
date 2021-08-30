@@ -1,5 +1,5 @@
 @font-face{
-font-family: Shanti;
+font-family: "Shanti";
 src: url(fonts/Shanti/Shanti-Regular.ttf);
 }
 
@@ -8,62 +8,69 @@ font-family: "Libre Franklin";
 src: url(fonts/Libre_Franklin/LibreFranklin-Regular.ttf);
 }
 
-. {box-sizing: border-box;}
-
-body {
-	font-family: Shanti, Helvetica, sans-serif;
-	background-color: #000000;
-	color: #FFFFFF;
-	margin: 0;
-	font-size: 3vw;
+:root {
+	--black: #000000;
+	--white: #FFFFFF;
+	--pink: #e0245e;
+	--gray: #15181c;
 }
 
+body {
+	font-family: "Shanti", Helvetica, sans-serif;
+	background-color: var(--black);
+	color: var(--white);
+	margin: 0;
+	font-size: 17px;
+}
+
+*.unselectable {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+ 
+	/*
+	  Introduced in IE 10.
+	  See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+	*/
+	-ms-user-select: none;
+	user-select: none;
+ }
+
 ::-moz-selection { /* Code for Firefox */
-  background: #e0245e;
-  color: #000000;
+  background: var(--pink);
+  color: var(--black);
 }
 
 ::selection {
-  background: #e0245e;
-  color: #000000;
+  background: var(--pink);
+  color: var(--black);
 }
 
 a {
-	color: #e0245e;
+	color: var(--pink);
 }
 
 a:hover {
-	color: #FFFFFF;
+	color: var(--white);
 	text-decoration: none;
 }
 
 header {
 	font-family: "Libre Franklin", Gadget, sans-serif;
-	background-color: #000000;
+	background-color: var(--black);
 	background-image: url("images/");
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
-	color: #FFFFFF;
-	padding-top: 10vw;
-	padding-bottom: 0;
-}
-
-header h3 {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0;
-	padding-top: 2vw;
-	font-size: 3vw;
-	letter-spacing: 0.2vw;
-	width: 60vw;
+	color: var(--white);
+	margin-top: 40px;
+	padding: 0;
 }
 
 header img {
-	width: 40vw;
+	width: 200px;
 	height: auto;
-	margin: 2vw auto 3vw auto;
+	margin: 20px auto 0 auto;
 	display: block;
 }
 
@@ -74,9 +81,9 @@ nav {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #000000;
+	background-color: var(--black);
 	overflow-x: hidden;
-	padding-top: 15vw;
+	padding-top: 70px;
 	transition: 0.3s;
 	display: flex;
 	flex-direction: column;
@@ -84,14 +91,13 @@ nav {
 
 nav a {
 	text-align: center;
-	color: #FFFFFF;
+	color: var(--white);
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: 0.3s;
 	font-weight: 900;
-	padding-top: 3vw;
-	padding-bottom: 3vw;
-	font-size: 4vw;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 nav img {
@@ -99,44 +105,55 @@ nav img {
 }
 
 nav a:hover {
-	background-color: #000000;
-	color: #FFFFFF;
+	background-color: var(--black);
+	color: var(--white);
 }
 
 nav .closebtn {
   position: absolute;
-  top: 5vw;
-  right: 5vw;
-  font-size: 7vw;
+  top: 20px;
+  right: 20px;
+  font-size: 3em;
   padding: 0;
 }
 
 .navbutton {
 	display: flex;
-	background-color: #000000;
+	background-color: var(--black);
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
-	height: 12vw;
-	color: #FFFFFF;
-	padding: 2vw;
-	padding-left: 6vw;
+	color: var(--white);
+	padding: 7px;
+	padding-left: 27px;
+	border-style: none none solid none;
+	border-color: var(--white);
+	border-width: 2px;
 }
 
 .navbutton span {
-	font-size: 8vw;
+	font-size: 40px;
 	cursor:pointer;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	/*
+	  Introduced in IE 10.
+	  See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+	*/
+	-ms-user-select: none;
+	user-select: none;
 }
 
 main {
-	padding: 5vw;
-	background-color: #000000;
+	margin: 30px;
+	background-color: var(--black);
 }
 
 main h2 {
-	color: #e0245e;
+	color: var(--pink);
 	font-family: "Libre Franklin", Gadget, sans-serif;
-	letter-spacing: 0.15vw;
+	/*letter-spacing: 0.15vw;*/
 	margin-top: 0;
 
 }
@@ -175,17 +192,17 @@ main h2 {
 	margin-bottom: 0;
 	text-transform: uppercase;
 	font-size: 4vw;
-	color: #e0245e;
+	color: var(--pink);
 }
 
 .carddetails h3 a {
-	color: #e0245e;
+	color: var(--pink);
 	text-decoration: none;
 	font-size: 4vw;
 }
 
 .carddetails h3 a:hover {
-	color: #FFFFFF;
+	color: var(--white);
 }
 
 .carddetails p {
@@ -194,99 +211,52 @@ main h2 {
 	margin-top: 1vw;
 }
 
-.carddetails a {
-
-}
-
 footer {
 	width: 100%;
 	text-align: center;
-	background-color: #000000;
-	height: 18vw;
-	color: #FFFFFF;
-	padding-top: 4vw;
-	font-size: 2.5vw;
-	line-height: 5vw;
+	background-color: var(--black);
+	color: var(--white);
+	margin: 40px auto 40px auto;
+	font-size: 0.7em;
 }
 
 footer a {
-	color: #FFFFFF;
-	padding: 1vw;
+	color: var(--white);
 }
 
 footer a:hover {
-	color: #e0245e;
+	color: var(--pink);
 }
 
 .article {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
+	margin-bottom: 30px;
+	max-width: 700px;
 }
 
 .article h1 {
 	font-family: "Libre Franklin", Gadget, sans-serif;
 	margin: 0;
-	margin-bottom: 3vw;
-	text-transform: uppercase;
-}
-
-.article .related h2 {
-	margin: 0;
-	margin-bottom: 1vw;
-	color: #1f1f1f;
+	margin-bottom: 10px;
 }
 
 .article .thumb {
 	width: 100%;
 	height: auto;
-	margin-bottom: 3vw;
+	margin-bottom: 10px;
 }
 
 .article .authdate {
-	font-size: 2.5vw;
+	font-size: 0.7em;
 	font-family: "Libre Franklin", Gadget, sans-serif;
-	margin-bottom: 3vw;
+	margin-bottom: 10px;
 }
 
 .article .content {
-	margin-bottom: 3vw;
+	margin-bottom: 0;
 }
 
-.article .related {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 3vw;
-}
-
-.article .related a {
-	margin-bottom: 1vw;
-	font-size: 1.4em;
-	font-weight: bold;
-}
-
-.article span {
-	width: 100%;
-	text-align: center;
-	margin-top: 5vw;
-	margin-bottom: 2vw;
-}
-
-.article span a {
-	cursor: pointer;
-	color: #FFFFFF;
-	background-color: #000000;
-	text-decoration: none;
-	padding: 2vw;
-	margin-left: 2vw;
-	margin-right: 2vw;
-	transition: 0.3s;
-	border-radius: 0.7vw;
-}
-
-.article span a:hover {
-	background-color: #e0245e;
-	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
+.article .content p {
+	margin: 0 0 20px 0;
 }
 
 .info {
@@ -304,7 +274,7 @@ footer a:hover {
 .info h3 {
 	border-bottom: solid;
 	border-width: 0.5vw;
-	border-color: #e0245e;
+	border-color: var(--pink);
 	margin: auto;
 	width: 70%;
 	padding-bottom: 1vw;
@@ -318,11 +288,11 @@ footer a:hover {
 
 .info h2 {
 	margin-top: 10vw;
-	color: #1f1f1f;
+	color: var(--gray);
 }
 
 .info .quote {
-	color: #e0245e;
+	color: var(--pink);
 }
 
 .info .container {
@@ -333,8 +303,8 @@ footer a:hover {
 
 .info .infobutton {
 	cursor: pointer;
-	color: #FFFFFF;
-	background-color: #000000;
+	color: var(--white);
+	background-color: var(--black);
 	text-decoration: none;
 	padding: 2vw;
 	margin-left: auto;
@@ -346,15 +316,15 @@ footer a:hover {
 }
 
 .info .infobutton:hover {
-	background-color: #e0245e;
+	background-color: var(--pink);
 	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
 }
 
 .button {
 	margin: auto;
 	cursor: pointer;
-	background-color: #e0245e;
-	color: #000000;
+	background-color: var(--pink);
+	color: var(--black);
 	text-decoration: none;
 	display: flex;
 	justify-content: center;
@@ -365,11 +335,12 @@ footer a:hover {
 	height: 7vw;
 	font-weight: bold;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .button:hover {
-	background-color: #FFFFFF;
-	color: #000000;
+	background-color: var(--white);
+	color: var(--black);
 	box-shadow: 0 1vw 3vw 0 rgba(0,0,0,0.24), 0 1vw 3vw 0 rgba(0,0,0,0.19);
 }
 
@@ -383,7 +354,7 @@ li {
 
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
 
 body {
 	font-size: 17px;
@@ -391,7 +362,7 @@ body {
 
 header {
 	font-family: "Libre Franklin", Gadget, sans-serif;
-	background-color: #000000;
+	background-color: var(--black);
 	background-image: url("images/homebanner.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -423,7 +394,7 @@ nav {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	background-color: #000000;
+	background-color: var(--black);
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
@@ -435,7 +406,7 @@ nav {
 nav a {
 	margin: 0;
 	padding: 14px 50px 14px 50px;
-	color: #FFFFFF;
+	color: var(--white);
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: 0.3s;
@@ -444,7 +415,7 @@ nav a {
 }
 
 nav a:hover {
-	background-color: #e0245e;
+	background-color: var(--pink);
 }
 
 nav img {
@@ -471,6 +442,7 @@ main {
 	margin-top: 40px;
 	margin-bottom: 40px;
 	padding: 35px;
+	max-width: 800px;
 }
 
 main h2 {
@@ -523,16 +495,10 @@ main h2 {
 	font-size: 1em;
 }
 
-.carddetails h3 a:hover {
-}
-
 .carddetails p {
 	font-size: 0.9em;
 	margin-bottom: 0;
 	margin-top: 8px;
-}
-
-.carddetails a {
 }
 
 footer {
@@ -549,15 +515,11 @@ footer a {
 }
 
 .article {
-	display: grid;
-	grid-gap: 30px;
-	grid-template-columns: 30% auto;
-	grid-template-rows: auto 230px auto;
 	width: 70%;
 }
 
 .article h1 {
-	margin-bottom: 10px;
+	margin-bottom: 0;
 }
 
 .article .related h2 {
@@ -566,8 +528,6 @@ footer a {
 
 .article .thumb {
 	margin-bottom: 5px;
-	grid-column: 1/3;
-	grid-row: 1/2;
 	width: 95%;
 	margin-left: auto;
 	margin-right: auto;
@@ -581,39 +541,6 @@ footer a {
 
 .article .content {
 	margin-bottom: 0;
-	grid-column: 2/3;
-	grid-row: 2/4;
-}
-
-.article .related {
-	margin-bottom: 0;
-	grid-column: 1/2;
-	grid-row: 2/3;
-}
-
-.article .related a {
-	margin-bottom: 7px;
-	font-size: 1em;
-}
-
-.article span {
-	margin: 0;
-	padding: 0;
-	grid-column: 1/2;
-	grid-row: 3/4;
-	display: grid;
-	grid-template-rows: 52px 52px 52px auto;
-}
-
-.article span a {
-	margin: auto;
-	padding: 7px;
-	border-radius: 4px;
-	width: 70%;
-}
-
-.article span a:hover {
-	box-shadow: 0 4px 14px 0 rgba(0,0,0,0.24), 0 14px 50px 0 rgba(0,0,0,0.19);
 }
 
 .info {
@@ -633,7 +560,7 @@ footer a {
 .info h3 {
 	border-bottom: solid;
 	border-width: 2px;
-	border-color: #e0245e;
+	border-color: var(--pink);
 	margin: auto;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
@@ -717,7 +644,6 @@ footer a {
 	font-size: 20px;
 }
 
-
 }
 
 @media only screen and (min-width: 1100px) {
@@ -726,48 +652,31 @@ footer a {
 
 @media (min-width: 1450px) {
 
-main {
-	width: 50%;
-}
-
 .article {
-	grid-gap: 25px;
-	width: 50%;
-	grid-template-rows: 200px 230px auto;
+	grid-gap: 20px;
+	width: 70%;
 }
 
 .article h1 {
-	grid-column: 2/3;
-	grid-row: 1/2;
+	font-size: 1.5em;
+}
+
+.article h3 {
+	margin-top: 0;
 }
 
 .article .thumb {
 	margin-bottom: 0;
-	grid-column: 1/2;
-	grid-row: 1/2;
+	padding-bottom: 0;
 	width: 100%;
 }
 
 .article .authdate {
 	font-size: 0.8em;
-	margin-bottom: 0;
-}
+	}
 
 .article .content {
 	margin-bottom: 0;
-	grid-column: 2/3;
-	grid-row: 1/4;
-}
-
-.article .related {
-	margin-bottom: 0;
-	grid-column: 1/2;
-	grid-row: 2/3;
-}
-
-.article span {
-	grid-column: 1/2;
-	grid-row: 3/4;
 }
 
 
