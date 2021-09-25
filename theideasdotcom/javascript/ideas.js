@@ -18,6 +18,7 @@ const ideas = [
     ["what if there was the internet but without liberals?", "utopia internet political"],
     ["idea: what if we had weed", "explore expand"],
     ["voting app\nrun by theideasdotcom", "voting votes elections internet political"],
+    ["Make cum great again", "cum cumrights"],
 ];
 
 const queryString = window.location.search;
